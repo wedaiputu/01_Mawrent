@@ -1,6 +1,12 @@
 import AllService from "../components/AllService";
+import BottomCarousel from "../components/BottomCarousel";
+import CardListMobil from "../components/CardListMobil";
+import Footer from "../components/Footer";
+import InstagramFeed from "../components/InstagramFeed";
+import RentCarousel from "../components/RentCarousel";
 import Slider from "../components/SliderTop";
 import SocialMedia from "../components/SocialMedia";
+import TextProduct from "../components/TextProduct";
 import Navbar from "../components/navbar";
 
 export default function Home() {
@@ -8,24 +14,11 @@ export default function Home() {
     <>
       <Navbar />
       <div className="bg-white justify-center">
-        <div className="m-10">
-          <h2 className="text-red-500 text-2xl textarea-lg">
-            Sewa Mobil Di Bali
-          </h2>
-          <h1 className="text-black text-5xl textarea-lg w-2/4 font-bold">
-            Booking sekarang, bayar saat serah terima.
-          </h1>
-          <p className="text-black text-1xl textarea-lg w-2/3">
-            Keunggulan layanan kami tidak hanya terletak pada harga yang
-            terjangkau, tetapi juga pada sistem “booking sekarang, bayar saat
-            serah terima” sehingga terhindar dari modus penipuan. Tim kami juga
-            siap membantu Anda dalam memilih mobil yang sesuai dengan preferensi
-            dan kebutuhan perjalanan Anda. Kami menawarkan anda sewa mobil di
-            Bali yang saat ini sedang digemari oleh banyak kalangan, dan membuat
-            perjalanan liburan anda di Bali lebih istimewa dan ber Image.
-          </p>
+        <div>
+          <TextProduct />
         </div>
 
+        {/* slider  */}
         <div className="flex justify-center">
           <div
             style={{
@@ -40,58 +33,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col mb-5 m-12">
-          <div className="carousel rounded-box mt-5">
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-                alt="Burger"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
-                alt="Burger"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
-                alt="Burger"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
-                alt="Burger"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
-                alt="Burger"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
-                alt="Burger"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="w-96 py-1 px-1"
-                src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
-                alt="Burger"
-              />
-            </div>
-          </div>
+        {/* Carousel */}
+        <div>
+          <RentCarousel />
+        </div>
+
+        <div className="mt-5 mb-5">
+          <CardListMobil />
         </div>
 
         <div className="mk-grid">
@@ -113,6 +61,17 @@ export default function Home() {
           </div>
         </div>
 
+        <div>
+          <BottomCarousel />
+        </div>
+
+        <div>
+          <InstagramFeed />
+        </div>
+
+        <div className="mt-0 pt-1">
+          <Footer />
+        </div>
       </div>
     </>
   );
